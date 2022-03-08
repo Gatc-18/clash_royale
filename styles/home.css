@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
 
 body{
     background-image: url("https://images.hdqwalls.com/wallpapers/clash-royale-clan-wars-5k-7j.jpg");
     background-size: cover;
-    background-position: center;
-    
+    font-family: 'Fredoka';
     margin:0
 }
 
@@ -41,6 +41,13 @@ header button{
 }
 
 main{
-    margin: 5%
+    margin: 0% 5%
+}
+
+#welcome{
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
 }
 

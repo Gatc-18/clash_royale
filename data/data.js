@@ -1,4 +1,4 @@
-let cards = [
+export let cards = [
     {
         id: 1,
         img: "../images/archer-queen.webp",
@@ -30,7 +30,7 @@ let cards = [
     },
     {
         id: 8,
-        img: "../images/electro-spirit.webp",
+        img: "../images/valkyrie.webp",
     },
     {
         id: 9,
