@@ -1,0 +1,46 @@
+
+body{
+    background-image: url("https://images.hdqwalls.com/wallpapers/clash-royale-clan-wars-5k-7j.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    margin:0
+}
+
+header{
+    padding:10px;
+    text-align: start;
+}
+
+header img{
+    width:150px;
+    display: inline-block;
+}
+
+ img:hover {
+    -webkit-transform:scale(1.2);
+-moz-transform:scale(1.2);
+-ms-transform:scale(1.2);
+-o-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+
+header div{
+    float:right;
+}
+
+header button{
+    padding:10px;
+    width:100px;
+    color: white;
+    background-color: #FA3418;
+    border: none;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+main{
+    margin: 5%
+}
+

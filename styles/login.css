@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+body{
+    background-image: url("https://i.pinimg.com/originals/a2/fb/23/a2fb230ac13e58c9232bc22892220593.png");
+    background-size: cover;
+    text-align: center;
+    font-family: 'Fredoka';
+}
+
+
+div{
+    background-color: white;
+    width:25%;
+    padding: 25px;
+    margin: auto;
+    border-radius: 30px;
+  
+
+}
+
+div input{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 75%
+}
+
+div button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2475FB;
+    color: white;
+    font-family: 'Fredoka';
+}
