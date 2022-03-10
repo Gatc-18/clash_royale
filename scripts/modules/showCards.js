@@ -1,9 +1,6 @@
 export const showCards = (data, container) => {
+    container.innerHTML = "";
     data.forEach(element => {
-        let img = document.createElement('img');
-        img.setAttribute('src', element.img );
-        img.setAttribute('id', element.id );
-        img.classList.add('cardImg')
-        container.appendChild(img)
+        container.innerHTML += `<img class="cardImg" src=${element.img} id=${element.id} />`
     });
 }

@@ -1,9 +1,10 @@
 import { cards } from "../data/data.js";
-import { addCard } from "./modules/addCard.js";
 import { showCards } from "./modules/showCards.js";
 let divWelcome = document.getElementById("welcome");
 let contenedorCards = document.getElementById('containerCards');
 let personajesSeleccionado = [];
+let contador = document.getElementById('contador');
+
 
 
 
@@ -14,12 +15,37 @@ document.addEventListener('DOMContentLoaded', () => {
     showCards(cards, contenedorCards)
 })
 
+
+
 document.addEventListener('click', (e) => {
-    if(e.target.classList.contains('cardImg')){
-        let idCard = e.target.id;
-        addCard(cards, idCard, personajesSeleccionado  )
+    if (e.target.classList.contains('cardImg')) {
+        
+        
+        if(personajesSeleccionado.length <= 5){
+            let idCard = e.target.id;
+
+            let elemento = cards.find(item => item.id == idCard);
+            let indice = cards.indexOf(elemento);  
+            
+            cards.splice(indice, 1);
+    
+            personajesSeleccionado.push(elemento);
+    
+            localStorage.setItem('Cseleccionadas', JSON.stringify(personajesSeleccionado))
+           
+            alert("Carta guardada correctamente")
+            contador.innerHTML = ` <a href="./maso.html"><button>${personajesSeleccionado.length}</button></a>`
+            showCards(cards, contenedorCards)
+
+
+
+        } else {
+            alert("Ya no puedes agregar cartas")
+        }  
     }
 })
+
+
 
 
 
