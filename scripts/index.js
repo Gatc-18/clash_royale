@@ -19,29 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('cardImg')) {
-        
-        
-        if(personajesSeleccionado.length <= 5){
-            let idCard = e.target.id;
-
-            let elemento = cards.find(item => item.id == idCard);
-            let indice = cards.indexOf(elemento);  
-            
-            cards.splice(indice, 1);
-    
-            personajesSeleccionado.push(elemento);
-    
-            localStorage.setItem('Cseleccionadas', JSON.stringify(personajesSeleccionado))
-           
-            alert("Carta guardada correctamente")
-            contador.innerHTML = ` <a href="./maso.html"><button>${personajesSeleccionado.length}</button></a>`
-            showCards(cards, contenedorCards)
-
-
-
-        } else {
-            alert("Ya no puedes agregar cartas")
-        }  
+        let idCard = e.target.id;
+        let elemento = cards.find(item => item.id == idCard);
+        localStorage.setItem('ObjectCard', JSON.stringify(elemento));
+        window.location.href = './detail.html';
     }
 })
 

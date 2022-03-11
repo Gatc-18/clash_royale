@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+
+body{
+    background-image: url("https://images.hdqwalls.com/wallpapers/clash-royale-clan-wars-5k-7j.jpg");
+    background-size: cover;
+    font-family: 'Fredoka';
+    margin:50px
+}
+
+#container{
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    width: 50%;
+    border-radius: 20px;
+    padding: 25px
+}
+
+img{
+    width: 180px;
+    display: flex;
+    margin: auto;
+}
+
+button{
+    padding: 20px;
+    background-color: #2475FB;
+    color: white;
+    font-family:'Fredoka';
+    border: none;
+    border-radius: 30px;
+}
+
+a{
+    float: left;
+}
+
+
