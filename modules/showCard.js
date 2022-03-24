@@ -1,9 +1,9 @@
 export const ShowCard = (data, container) => {
-   
-      data.forEach( element => {
-        const {id, img:imagen } = element;
-          container.innerHTML += `
-             <img src=${imagen} id=${id} />
+    container.innerHTML = '';
+    data.forEach(element => {
+        const { id, img: imagen } = element;
+        container.innerHTML += `
+             <img class='card' src=${imagen} id=${id} />
           `
-      });
+    });
 }
