@@ -4,14 +4,22 @@ import { ShowCard } from "../modules/showCard.js";
 let nombreU = localStorage.getItem('nombreUsuario');
 let contenedorWelcome = document.getElementById('welcome');
 let containerCards = document.getElementById('containerCards');
-let favoritos = [];
+let cantidadFavoritos = document.querySelector('button');
+let datosLocalStorage = JSON.parse(localStorage.getItem('cardFavoritos'));
+let favoritos =  datosLocalStorage == null ? [] : datosLocalStorage ;
 
+
+
+
+cantidadFavoritos.textContent = favoritos.length;
 contenedorWelcome.innerHTML = `
     <h1>Hola ${nombreU}, te damos la bienvenida a Clash Royale </h1>    
 `
 
 
-ShowCard(cards, containerCards );
+ShowCard(cards, containerCards);
+
+
 
 
 document.addEventListener('click', ({target}) => {
@@ -25,6 +33,7 @@ document.addEventListener('click', ({target}) => {
 
     
         favoritos.push(elemento);
+        cantidadFavoritos.textContent = favoritos.length;
         localStorage.setItem('cardFavoritos', JSON.stringify(favoritos)  );
         ShowCard(cards, containerCards);
 
