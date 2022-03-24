@@ -1,5 +1,5 @@
 export let cards = [
-    { 
+   { 
         id: 1,
         img: "../images/archer-queen.webp",
         name: "archer-queen",
